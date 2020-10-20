@@ -1,0 +1,100 @@
+2020-10-14 13:37:34 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1096): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1050): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(213): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'tags', 'Tags')
+#12 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Tags')
+#13 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Tags')
+#14 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Tags', 0)
+#15 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#16 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('tags')
+#17 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#18 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 C:\Program Files\Ampps\www\420-5b7\projet final\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+
+2020-10-14 13:39:28 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1096): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1050): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(213): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'tags', 'Tags')
+#12 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Tags')
+#13 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Tags')
+#14 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Tags', 0)
+#15 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#16 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('tags')
+#17 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#18 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 C:\Program Files\Ampps\www\420-5b7\projet final\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+
+2020-10-14 13:42:42 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tab_gas.tags' doesn't exist in C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'tags', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('tags', Array)
+#2 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('tags')
+#3 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#4 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'tags', 'Tags')
+#7 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Tags')
+#8 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Tags')
+#9 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Tags', 0)
+#10 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('tags')
+#12 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\420-5b7\projet final\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tab_gas.tags' doesn't exist in C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 37
+Stack Trace:
+#0 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Connection.php(358): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Connection.php(361): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Connection.php(310): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'tags', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('tags', Array)
+#10 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('tags')
+#11 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#12 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'tags', 'Tags')
+#15 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Tags')
+#16 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Tags')
+#17 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Tags', 0)
+#18 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('tags')
+#20 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\Program Files\Ampps\www\420-5b7\projet final\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\Program Files\Ampps\www\420-5b7\projet final\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
