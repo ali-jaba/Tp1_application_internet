@@ -21,6 +21,21 @@ use Cake\Http\Middleware\CsrfProtectionMiddleware;
 use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
+    
+
+Router::extensions(['json', 'xml']);
+Router::extensions(['pdf']);
+
+Router::prefix('api', function ($routes) {
+    $routes->setExtensions(['json', 'xml']);
+    $routes->resources('LieuGas');
+});
+
+Router::prefix('admin', function (RouteBuilder $routes) {
+    // All routes here will be prefixed with `/admin`
+    // And have the prefix => admin route element added.
+    $routes->fallbacks(DashedRoute::class);
+});
 
 /*
  * The default class to use for all routes

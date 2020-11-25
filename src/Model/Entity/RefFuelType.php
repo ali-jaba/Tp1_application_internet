@@ -32,6 +32,7 @@ class RefFuelType extends Entity
     protected $_accessible = [
         'id' => true,
         'user_id' => true,
+        'NomGas_id' => true,
         'Fuel_Type_Name' => true,
         'slug' => true,
         'Fuel_Type_Description' => true,

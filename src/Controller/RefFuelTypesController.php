@@ -40,6 +40,7 @@ class RefFuelTypesController extends AppController {
 
         // Load Files model
         $this->loadModel('Files');
+        $this->viewBuilder()->setLayout('cakephp_default');
 
         // Set the layout
    //     $this->layout = 'frontend';
@@ -103,10 +104,12 @@ class RefFuelTypesController extends AppController {
      */
     public function view($id = null) {
         $refFuelType = $this->RefFuelTypes->get($id, [
-            'contain' => ['Users'],
+            'contain' => ['Users','NomGas'],
         ]);
 
         $this->set('refFuelType', $refFuelType);
+        
+        
     }
 
     /**
@@ -139,7 +142,7 @@ class RefFuelTypesController extends AppController {
      */
     public function edit($id = null) {
         $refFuelType = $this->RefFuelTypes->get($id, [
-            'contain' => [],
+            'contain' => ['NomGas'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $refFuelType = $this->RefFuelTypes->patchEntity($refFuelType, $this->request->getData(), ['accessibleFields' => ['user_id' => false]]);

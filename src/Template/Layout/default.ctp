@@ -29,9 +29,24 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->Html->css('base.css') ?>
         <?= $this->Html->css('style.css') ?>
 
+        <?php
+        echo $this->Html->css([
+            'base.css',
+            'style.css',
+            'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'
+        ]);
+        ?>
+
         <?= $this->fetch('meta') ?>
         <?= $this->fetch('css') ?>
         <?= $this->fetch('script') ?>
+        <?php
+        echo $this->Html->script([
+            'https://code.jquery.com/jquery-1.12.4.js',
+            'https://code.jquery.com/ui/1.12.1/jquery-ui.js'
+                ], ['block' => 'scriptLibraries']
+        );
+        ?>
     </head>
     <body>
         <nav class="top-bar expanded" data-topbar role="navigation">
@@ -42,20 +57,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </ul>
             <div class="top-bar-section">
                 <ul class="right">
+                    <li><?= $this->Html->link(__('Linked lists demo'), ['controller' => 'NomGas', 'action' => 'add']) ?></li>
                     <?php
                     $loguser = $this->request->session()->read('Auth.User');
                     if ($loguser) {
                         $user = $loguser['email'];
-                        echo "<span>" . $this->Html->link($user, ['controller' => 'Users','action' => 'view', $loguser['id']]);
+                        echo "<span>" . $this->Html->link($user, ['controller' => 'Users', 'action' => 'view', $loguser['id']]);
                         echo $this->Html->link(' logout', ['controller' => 'Users', 'action' => 'logout']);
                     } else {
                         echo $this->Html->link('login', ['controller' => 'Users', 'action' => 'login']);
                     }
                     ?>
                     <li><a target="_blank" href="https://book.cakephp.org/3/">Documentation</a></li>
+                    <li><?= $this->Html->link(__('A propos'), ['controller' => 'Apropos', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?></li>
-                    <li><?= $this->Html->link('Anglais', ['action' => 'changeLang', 'en_US'], ['escape' => false])?></li>
-                    <li><?= $this->Html->link('Espagnol', ['action' => 'changeLang', 'es_ES'], ['escape' => false])?></li>
+                    <li><?= $this->Html->link('Anglais', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?></li>
+                    <li><?= $this->Html->link('Espagnol', ['action' => 'changeLang', 'es_ES'], ['escape' => false]) ?></li>
                     <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
                 </ul>
             </div>
@@ -66,6 +83,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
         <footer>
         </footer>
+        <?= $this->fetch('scriptLibraries') ?>
+        <?= $this->fetch('script'); ?>
+        <?= $this->fetch('scriptBottom') ?> 
     </body>
 </html>
 

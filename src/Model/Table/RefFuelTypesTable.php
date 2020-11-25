@@ -47,6 +47,10 @@ class RefFuelTypesTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER',
         ]);
+        $this->belongsTo('NomGas', [
+            'foreignKey' => 'NomGas_id',
+            'joinType' => 'INNER',
+        ]);
         
         
         $this->hasMany('transactions', [

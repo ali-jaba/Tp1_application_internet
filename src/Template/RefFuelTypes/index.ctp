@@ -39,6 +39,7 @@
 
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $refFuelType->id]) ?>
+                        <?= $this->Html->link('(pdf)', ['action' => 'view', $refFuelType->slug . '.pdf']) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $refFuelType->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $refFuelType->id], ['confirm' => __('Are you sure you want to delete # {0}?', $refFuelType->id)]) ?>
                     </td>
